@@ -1,12 +1,11 @@
 <?php
-
+    session_start();
 
     if (!defined('__NOT_DIRECT')) {
         // Ini tidak ada masalah
         die('you cannot access!');
     }
 
-    session_start();
     // Jangan include lagi db_config.php
     // include_once dirname(__FILE__).DIRECTORY_SEPARATOR.'db_config.php';
     if (!isset($_SESSION['my_user_agent']) || ($_SESSION['my_user_agent']!=md5($_SERVER['HTTP_USER_AGENT']))) {
@@ -29,7 +28,7 @@
 
     if (!$allow) {
         if ($__user_level == 'therapist' && $currentPath != 'login.php') {
-            header("Location: ".BASE_URL.'login.php');
+            header("Location: " . BASE_URL . 'login.php');
         } else {
             echo "You cannot access this page!";
         }
