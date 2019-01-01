@@ -3,19 +3,16 @@ session_start();
 
 // die($_SESSION['role']);
 
-if(isset($_SESSION['role'])){
-    if($_SESSION['role']=="admin")
-    {
+if (isset($_SESSION['role'])) {
+    if ($_SESSION['role']=="admin") {
         header("Location: admin");
     }
-    
-    if($_SESSION['role']=="owner")
-    {
+
+    if ($_SESSION['role']=="owner") {
         header("Location: owner");
-	}
-	
-	if($_SESSION['role']=="therapis")
-    {
+    }
+
+    if ($_SESSION['role']=="therapis") {
         header("Location: therapis");
     }
 }
@@ -49,7 +46,7 @@ include('index2.php');
 
 		<div class="account-pages"></div>
 		<div class="clearfix"></div>
-		
+
 		<div class="wrapper-page">
 			<div class="card-box">
 				<div class="panel-heading">
@@ -85,7 +82,7 @@ include('index2.php');
 								<a href="page-recoverpw.php" class="text-dark"><i class="fa fa-lock m-r-5"></i> Forgot your password?</a>
 							</div>
 						</div>
-						
+
 					</form>
 
 				</div>
@@ -97,30 +94,25 @@ include('index2.php');
 			var resizefunc = [];
 		</script>
 
-<?php 
-    
+<?php
+
 //   include("api/db_config.php");
-  if(isset($_POST['login']))  
-  {  
-	  $email=$_POST['email'];  
-	  $password=$_POST['password'];  
-	  
-	  $check_user="select * from users WHERE email='$email'AND password='$password'";  
-	
-	  $run=mysqli_query($con,$check_user);  
-	
-	  if(mysqli_num_rows($run))  
-	  {  
-		  echo "<script>window.open('index.php','_self')</script>";  
-	
-		  $_SESSION['email']=$email;//here session is used and value of $user_email store in $_SESSION.  
-	
-	  }  
-	  else  
-	  {  
-		echo "<script>alert('Email or Password is incorrect!')</script>";  
-	  }  
-  }  
+  if (isset($_POST['login'])) {
+      $email=$_POST['email'];
+      $password=$_POST['password'];
+
+      $check_user="select * from users WHERE email='$email'AND password='$password'";
+
+      $run=mysqli_query($con, $check_user);
+
+      if (mysqli_num_rows($run)) {
+          echo "<script>window.open('index.php','_self')</script>";
+
+          $_SESSION['email']=$email; // here session is used and value of $user_email store in $_SESSION.
+      } else {
+          echo "<script>alert('Email or Password is incorrect!')</script>";
+      }
+  }
   ?>
 
 		<!-- jQuery  -->

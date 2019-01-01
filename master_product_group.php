@@ -46,7 +46,7 @@ include("api/db_config.php");
     <!-- ========== Left Sidebar Start ========== -->
     <?php include "sidemenu.php"; ?>
     <!-- Left Sidebar End -->
-    
+
 
     <!-- ============================================================== -->
     <!-- Start right Content here -->
@@ -80,36 +80,36 @@ include("api/db_config.php");
 
 <?php
 $action=$_GET["update"];
-if($action=="1"){
-?>
+if ($action=="1") {
+    ?>
                 <!-- Update -->
                         <div class="row">
 							<div class="col-sm-12">
-								<div class="card-box">                                        
+								<div class="card-box">
 									<form action="#" data-parsley-validate novalidate>
-                                    <div class="row"> 
-                                        <div class="col-md-5"> 
-                                            <div class="form-group"> 
-                                                <label for="field-1" class="control-label">Edit Product Group</label> 
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="form-group">
+                                                <label for="field-1" class="control-label">Edit Product Group</label>
                                                 <input type="text" name="prodName" class="form-control" id="field-1" placeholder="" required parsley-trigger="change">
-                                            </div> 
-                                        </div> 
-                                        <div class="col-md-5"> 
-                                            <div class="form-group"> 
-                                                <label for="field-1" class="control-label">Brand</label> 
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="form-group">
+                                                <label for="field-1" class="control-label">Brand</label>
                                                 <input type="text" name="prodName" class="form-control" id="field-1" placeholder="MOM N JO" required parsley-trigger="change">
-                                            </div> 
-                                        </div> 
-                                        <div class="col-md-2"> 
-                                            <div class="form-group"> 
-                                                <label for="field-1" class="control-label">Active Status</label> 
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label for="field-1" class="control-label">Active Status</label>
                                                 <select class="form-control select2" name="prodStatus" id="field-7" parsley-trigger="change" required>
                                                     <option value="enable">Enable</option>
                                                     <option value="disable">Disable</option>
                                                 </select>
-                                            </div> 
-                                        </div> 
-                                        <div class="col-md-12"> 
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
                                             <div class="form-group text-left m-b-0">
                                                 <button class="btn btn-sm w-sm btn-default waves-effect waves-light" type="submit">
                                                 Save</button>
@@ -122,40 +122,38 @@ if($action=="1"){
 								</div>
 							</div>
 					    </div>
-<?php 
-} 
-else
-{
-?>
+<?php
+} else {
+    ?>
 
                 <!-- Create -->
                         <div class="row">
 							<div class="col-sm-12">
-								<div class="card-box">                                        
+								<div class="card-box">
 									<form action="#" data-parsley-validate novalidate>
-                                    <div class="row"> 
-                                        <div class="col-md-5"> 
-                                            <div class="form-group"> 
-                                                <label for="field-1" class="control-label">Add Product Group</label> 
+                                    <div class="row">
+                                        <div class="col-md-5">
+                                            <div class="form-group">
+                                                <label for="field-1" class="control-label">Add Product Group</label>
                                                 <input type="text" name="prodName" class="form-control" id="field-1" placeholder="" required parsley-trigger="change">
-                                            </div> 
-                                        </div> 
-                                        <div class="col-md-5"> 
-                                            <div class="form-group"> 
-                                                <label for="field-1" class="control-label">Brand</label> 
+                                            </div>
+                                        </div>
+                                        <div class="col-md-5">
+                                            <div class="form-group">
+                                                <label for="field-1" class="control-label">Brand</label>
                                                 <input type="text" name="prodName" class="form-control" id="field-1" placeholder="MOM N JO" required parsley-trigger="change">
-                                            </div> 
-                                        </div> 
-                                        <div class="col-md-2"> 
-                                            <div class="form-group"> 
-                                                <label for="field-1" class="control-label">Active Status</label> 
+                                            </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                            <div class="form-group">
+                                                <label for="field-1" class="control-label">Active Status</label>
                                                 <select class="form-control select2" name="prodStatus" id="field-7" parsley-trigger="change" required>
                                                     <option value="enable">Enable</option>
                                                     <option value="disable">Disable</option>
                                                 </select>
-                                            </div> 
-                                        </div> 
-                                        <div class="col-md-12"> 
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
                                             <div class="form-group text-left m-b-0">
                                                 <button class="btn btn-sm w-sm btn-default waves-effect waves-light" type="submit">
                                                 Save</button>
@@ -168,8 +166,8 @@ else
 								</div>
 							</div>
 					    </div>
-<?php 
-} 
+<?php
+}
 ?>
 
 
@@ -183,14 +181,14 @@ else
                                    width="100%">
                                 <thead>
                                 <tr>
-                                    <th></th> 
+                                    <th></th>
                                     <th>Product Group</th>
                                     <th>Brand</th>
                                     <th>Active</th>
                                     <th class="text-center">Action</th>
                                 </tr>
-                                </thead>  
-                                <tbody>                        
+                                </thead>
+                                <tbody>
                                 <tr>
                                 <td>
                                     <a href="formproduct_create.php?group=">
@@ -209,7 +207,7 @@ else
                                 <button type="button" class="btn btn-xs btn-danger waves-effect waves-light"> <i class="fa fa-trash m-r-5"></i> <span>
                                 Delete</span> </button>
                                 </td>
-                                </tr>  
+                                </tr>
                              </tbody>
                         </table>
                         </form>
@@ -218,7 +216,7 @@ else
                 </div>
                 <!-- end row -->
 
-                
+
 
             </div> <!-- container -->
         </div> <!-- content -->
@@ -316,7 +314,7 @@ else
         function goBack() {
             window.history.back();
         }
-    </script> 
+    </script>
 
 </body>
 </html>

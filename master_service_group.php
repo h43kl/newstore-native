@@ -47,7 +47,7 @@ include("api/db_config.php");
     <!-- ========== Left Sidebar Start ========== -->
     <?php include "sidemenu.php"; ?>
     <!-- Left Sidebar End -->
-    
+
 
     <!-- ============================================================== -->
     <!-- Start right Content here -->
@@ -81,31 +81,31 @@ include("api/db_config.php");
 
                         <div class="row">
 							<div class="col-sm-12">
-								<div class="card-box">                                        
+								<div class="card-box">
 									<form action="#" data-parsley-validate novalidate>
-                                    <div class="row"> 
-                                        <div class="col-md-4"> 
-                                            <div class="form-group"> 
-                                                <label for="field-1" class="control-label">Service Group</label> 
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="field-1" class="control-label">Service Group</label>
                                                 <input type="text" name="prodName" class="form-control" id="field-1" placeholder="" required parsley-trigger="change">
-                                            </div> 
-                                        </div> 
-                                        <div class="col-md-4"> 
-                                            <div class="form-group"> 
-                                                <label for="field-1" class="control-label">Keterangan</label> 
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="field-1" class="control-label">Keterangan</label>
                                                 <input type="text" name="prodName" class="form-control" id="field-1" placeholder="" required parsley-trigger="change">
-                                            </div> 
-                                        </div> 
-                                        <div class="col-md-4"> 
-                                            <div class="form-group"> 
-                                                <label for="field-1" class="control-label">Active Status</label> 
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="field-1" class="control-label">Active Status</label>
                                                 <select class="form-control select2" name="prodStatus" id="field-7" parsley-trigger="change" required>
                                                     <option value="enable">Enable</option>
                                                     <option value="disable">Disable</option>
                                                 </select>
-                                            </div> 
-                                        </div> 
-                                        <div class="col-md-12"> 
+                                            </div>
+                                        </div>
+                                        <div class="col-md-12">
                                         <div class="form-group text-right m-b-0">
 											<button class="btn btn-sm w-sm btn-default waves-effect waves-light" type="submit">
 												Save
@@ -124,20 +124,20 @@ include("api/db_config.php");
                 <div class="row">
                     <div class="col-sm-12">
                         <div class="card-box table-responsive">
-                        
+
                         <table id="datatable-responsive"
                                    class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0"
                                    width="100%">
                                 <thead>
                                 <tr>
-                                    <th>No</th> 
+                                    <th>No</th>
                                     <th>Service Group Name</th>
                                     <th>Keterangan</th>
                                     <th>Aktif</th>
                                     <th class="text-center">Action</th>
                                 </tr>
-                                </thead>  
-                                <tbody>                        
+                                </thead>
+                                <tbody>
                                 <tr>
                                 <td></td>
                                 <td></td>
@@ -147,7 +147,7 @@ include("api/db_config.php");
                                 <button type="button" class="btn btn-xs btn-warning waves-effect waves-light"> <i class="fa fa-edit m-r-5"></i> <span>Edit</span> </button>
                                 <button type="button" class="btn btn-xs btn-danger waves-effect waves-light"> <i class="fa fa-trash m-r-5"></i> <span>Delete</span> </button>
                                 </td>
-                                </tr>  
+                                </tr>
                              </tbody>
                             </table>
 
@@ -156,7 +156,7 @@ include("api/db_config.php");
                 </div>
                 <!-- end row -->
 
-                
+
 
             </div> <!-- container -->
         </div> <!-- content -->

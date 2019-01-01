@@ -58,32 +58,32 @@
 							<div class="col-lg-8">
 								<div class="card-box">
 									<h4 class="m-t-0 header-title"><b>Product Form</b></h4>
-		                                        
+
 									<form action="" data-parsley-validate novalidate>
-                                    <div class="row"> 
+                                    <div class="row">
 
-                                        <div class="col-md-8"> 
-                                            <div class="form-group"> 
-                                                <label for="field-1" class="control-label">Product Name</label> 
+                                        <div class="col-md-8">
+                                            <div class="form-group">
+                                                <label for="field-1" class="control-label">Product Name</label>
                                                 <input type="text" name="prodName" class="form-control" id="field-1" parsley-trigger="change" disabled>
-                                            </div> 
-                                        </div> 
+                                            </div>
+                                        </div>
 
-                                        <div class="col-md-4"> 
-                                            <div class="form-group"> 
-                                                <label for="field-1" class="control-label">ID Product</label> 
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="field-1" class="control-label">ID Product</label>
                                                 <input type="text" name="prodKode" class="form-control" id="field-1" disabled>
-                                            </div> 
-                                        </div> 
+                                            </div>
+                                        </div>
 
-                                        <div class="col-md-12"> 
-                                            <div class="form-group"> 
-                                                <label for="field-1" class="control-label">Why delete this product ?</label> 
+                                        <div class="col-md-12">
+                                            <div class="form-group">
+                                                <label for="field-1" class="control-label">Why delete this product ?</label>
                                                 <input type="text" name="prodName" class="form-control" id="field-1" placeholder="" required parsley-trigger="change">
-                                            </div> 
-                                        </div> 
-                                        
-                                        <div class="col-md-12">  
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
                                             <div class="form-group text-left m-b-0">
                                                 <button class="btn w-md btn-danger waves-effect waves-light" type="submit">
                                                 Delete</button>
@@ -91,18 +91,18 @@
                                                 Back</button>
 									         </div>
                                         </div>
-                                        
+
 									</div>
 									</form>
 								</div>
 							</div>
 						</div>
-                        
-                        
 
-                        
+
+
+
                     </div> <!-- container -->
-                               
+
                 </div> <!-- content -->
 
                 <?php include 'footer.php'; ?>
@@ -131,9 +131,9 @@
 
         <script src="assets/js/jquery.core.js"></script>
         <script src="assets/js/jquery.app.js"></script>
-        
+
         <script type="text/javascript" src="assets/plugins/parsleyjs/parsley.min.js"></script>
-        
+
         <script type="text/javascript">
 			$(document).ready(function() {
 				$('form').parsley();
@@ -144,7 +144,7 @@
         function goBack() {
             window.history.back();
         }
-        </script> 
-	
+        </script>
+
 	</body>
 </html>

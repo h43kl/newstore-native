@@ -3,9 +3,9 @@
 define('BASE_URL', '/newstore/');
 define('__NOT_DIRECT', true);
 
-// Connection variables 
-$host = "localhost"; // MySQL host name eg. localhost
-$user = "root"; // MySQL user. eg. root ( if your on localserver)
+// Connection variables
+$host     = "localhost"; // MySQL host name eg. localhost
+$user     = "root"; // MySQL user. eg. root ( if your on localserver)
 $password = ""; // MySQL user password  (if password is not set for your root user then keep it empty )
 $database = "app_post"; // MySQL Database name
 
@@ -18,10 +18,8 @@ if ($con->connect_error) {
 }
 
 date_default_timezone_set('Asia/Jakarta');
-	$datetime_set	=date('Y-m-d H:i:s');
-	$date_set		=date('Y-m-d');
-	$time_set		=date('H:i:s');
+$datetime_set	= date('Y-m-d H:i:s');
+$date_set		= date('Y-m-d');
+$time_set		= date('H:i:s');
 
-error_reporting(E_ALL ^ (E_NOTICE | E_WARNING)); 
-
-?>
+error_reporting(E_ALL ^ (E_NOTICE | E_WARNING));

@@ -38,7 +38,7 @@ include("api/db_config.php");
 
     <?php include "sidemenu.php"; ?>
     <!-- Left Sidebar End -->
-    
+
     <!-- Start right Content here -->
     <div class="content-page">
         <!-- Start content -->
@@ -70,7 +70,7 @@ include("api/db_config.php");
                     </div>
                 </div>
 
-                        <div class="row">   
+                        <div class="row">
 							<div class="col-sm-12">
 								<div class="card-box widget-inline">
 									<div class="row">
@@ -80,21 +80,21 @@ include("api/db_config.php");
 												<h4 class="text-muted">Products</h4>
 											</div>
 										</div>
-										
+
 										<div class="col-lg-4 col-sm-4">
 											<div class="widget-inline-box text-center">
 												<h3><i class="text-custom fa fa-cubes"></i> <b data-plugin="counterup">5</b></h3>
 												<h4 class="text-muted">Product Group</h4>
 											</div>
 										</div>
-										
+
 										<div class="col-lg-4 col-sm-4">
 											<div class="widget-inline-box text-center b-0">
 												<h3><i class="text-pink fa fa-frown-o"></i> <b data-plugin="counterup">5</b></h3>
 												<h4 class="text-muted">Out of Stock</h4>
 											</div>
 										</div>
-										
+
 									</div>
 								</div>
 							</div>
@@ -110,11 +110,11 @@ include("api/db_config.php");
                             <tr>
                                 <th>Product Name</th>
                                 <th>Group</th>
-                                <th>Stock Min</th> 
-                                <th>Price</th> 
+                                <th>Stock Min</th>
+                                <th>Price</th>
                                 <th class="text-center">Action</th>
                             </tr>
-                            </thead>  
+                            </thead>
                             <tbody>
                             <tr>
                                 <td></td>
@@ -131,13 +131,13 @@ include("api/db_config.php");
                                 Delete</span> </button>
                                 </td>
                                 </a>
-                            </tr>  
+                            </tr>
                             </tbody>
                             </table>
                         </div>
                     </div>
                 </div> <!-- end row -->
-            
+
             <!-- container -->
 
         </div> <!-- content -->

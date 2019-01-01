@@ -14,7 +14,7 @@
         <link href="assets/plugins/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/plugins/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet" />
         <link href="assets/plugins/bootstrap-touchspin/css/jquery.bootstrap-touchspin.min.css" rel="stylesheet" />
-		
+
         <link href="assets/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/core.css" rel="stylesheet" type="text/css" />
         <link href="assets/css/components.css" rel="stylesheet" type="text/css" />
@@ -69,27 +69,27 @@
 							<div class="col-lg-8">
 								<div class="card-box">
 									<h4 class="m-t-0 header-title"><b>Product Form</b></h4>
-		                                        
+
 									<form action="#" data-parsley-validate novalidate>
-                                    <div class="row"> 
+                                    <div class="row">
 
                                         <div class="col-md-11">
                                             <div class="form-group">
-                                                <label for="field-1" class="control-label">Product Group</label>  
+                                                <label for="field-1" class="control-label">Product Group</label>
                                             </div>
                                             <div class="form-group">
                                                 <div class="input-group">
 
                                                 <select name="prodGroup" class="form-control" required id="product_group">
                                                 <option value="">Pilih</option>
-                                                <?php 
+                                                <?php
                                                 include "api/db_config.php";
                                                 $datapd = mysqli_query($con, "SELECT * FROM mproduct_group");
-                                                while($rowpd=mysqli_fetch_array($datapd))
-                                                {
-                                                ?>
+                                                while ($rowpd=mysqli_fetch_array($datapd)) {
+                                                    ?>
                                                 <option value="<?php echo $rowpd['id_productgroup']; ?>"><?php echo $rowpd['productgroup_name']; ?></option>
-                                                <?php } 
+                                                <?php
+                                                }
                                                 ?>
                                                 </select>
 
@@ -98,57 +98,57 @@
                                                 <button type="button" class="btn btn-pink waves-effect waves-light m-l-15"> <i class="fa fa-plus"></i> Add Group</button>
                                                 </a>
                                                 </span>
-                                                
+
                                                 </div>
                                             </div>
                                         </div>
 
-                                        <div class="col-md-8"> 
-                                            <div class="form-group"> 
-                                                <label for="field-1" class="control-label">Product Name</label> 
+                                        <div class="col-md-8">
+                                            <div class="form-group">
+                                                <label for="field-1" class="control-label">Product Name</label>
                                                 <input type="text" name="prodName" class="form-control" id="field-1" placeholder="" required parsley-trigger="change">
-                                            </div> 
-                                        </div> 
+                                            </div>
+                                        </div>
 
-                                        <div class="col-md-4"> 
-                                            <div class="form-group"> 
-                                                <label for="field-1" class="control-label">ID Product</label> 
+                                        <div class="col-md-4">
+                                            <div class="form-group">
+                                                <label for="field-1" class="control-label">ID Product</label>
                                                 <input type="text" name="prodKode" class="form-control" id="field-1" >
-                                            </div> 
-                                        </div> 
+                                            </div>
+                                        </div>
 
                                         <div class="col-md-8">
-                                            <div class="form-group"> 
-                                                <label for="field-1" class="control-label">Price</label> 
-                                                <input type="text" name="prodPrice" class="form-control" id="field-1" placeholder="" required parsley-trigger="change"> 
-                                            </div> 
-                                        </div> 
+                                            <div class="form-group">
+                                                <label for="field-1" class="control-label">Price</label>
+                                                <input type="text" name="prodPrice" class="form-control" id="field-1" placeholder="" required parsley-trigger="change">
+                                            </div>
+                                        </div>
 
-                                        <div class="col-md-3"> 
-                                            <div class="form-group"> 
-                                                <label for="field-1" class="control-label">Limit Stock</label> 
-                                                <input type="text" name="prodLimit_stock" class="form-control" id="field-1" placeholder="" required parsley-trigger="change"> 
-                                            </div> 
-                                        </div> 
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="field-1" class="control-label">Limit Stock</label>
+                                                <input type="text" name="prodLimit_stock" class="form-control" id="field-1" placeholder="" required parsley-trigger="change">
+                                            </div>
+                                        </div>
 
-                                        <div class="col-md-8"> 
-                                            <div class="form-group"> 
-                                                <label for="field-1" class="control-label">Product Info</label> 
+                                        <div class="col-md-8">
+                                            <div class="form-group">
+                                                <label for="field-1" class="control-label">Product Info</label>
                                                 <textarea class="form-control autogrow" name="prodInfo" id="field-7" placeholder="Write something about product information"></textarea>
-                                            </div> 
-                                        </div> `  
+                                            </div>
+                                        </div> `
 
-                                        <div class="col-md-3"> 
-                                            <div class="form-group"> 
-                                                <label for="field-1" class="control-label">Active Status</label> 
+                                        <div class="col-md-3">
+                                            <div class="form-group">
+                                                <label for="field-1" class="control-label">Active Status</label>
                                                 <select class="form-control" name="prodStatus" id="field-7" parsley-trigger="change" required>
                                                     <option value="enable">Enable</option>
                                                     <option value="disable">Disable</option>
                                                 </select>
-                                            </div> 
-                                        </div> 
-                                        
-                                        <div class="col-md-12">  
+                                            </div>
+                                        </div>
+
+                                        <div class="col-md-12">
                                             <div class="form-group text-center m-b-0">
                                                 <button class="btn w-md btn-default waves-effect waves-light" type="submit">
                                                 Save</button>
@@ -156,18 +156,18 @@
                                                 Back</button>
 									         </div>
                                         </div>
-                                        
+
 									</div>
 									</form>
 								</div>
 							</div>
 						</div>
-                        
-                        
 
-                        
+
+
+
                     </div> <!-- container -->
-                               
+
                 </div> <!-- content -->
 
                 <?php include 'footer.php'; ?>
@@ -215,8 +215,8 @@
         <script src="assets/js/jquery.app.js"></script>
 
         <script type="text/javascript" src="assets/plugins/parsleyjs/parsley.min.js"></script>
-        
-        
+
+
         <script type="text/javascript">
 			$(document).ready(function() {
 				$('form').parsley();
@@ -227,7 +227,7 @@
         function goBack() {
             window.history.back();
         }
-        </script> 
-	
+        </script>
+
 	</body>
 </html>
