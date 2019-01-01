@@ -1,3 +1,6 @@
+<?php
+    include_once('include/cek_login.php');
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -16,7 +19,7 @@
         <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
 
         <script src="assets/js/modernizr.min.js"></script>
-        
+
     </head>
 
 
@@ -33,7 +36,7 @@
             <?php include "sidemenu.php"; ?>
             <!-- Left Sidebar End -->
 
-            <!-- Start right Content here -->                   
+            <!-- Start right Content here -->
             <div class="content-page">
                 <!-- Start content -->
                 <div class="content">
@@ -89,15 +92,15 @@
                         </div>
 
                     </div> <!-- container -->
-                               
+
                 </div> <!-- content -->
 
                  <!-- Footer -->
                  <?php include "footer.php"; ?>
 
             </div>
-            
-            
+
+
             <!-- ============================================================== -->
             <!-- End Right content here -->
             <!-- ============================================================== -->
@@ -106,7 +109,7 @@
         <!-- END wrapper -->
 
 
-    
+
         <script>
             var resizefunc = [];
         </script>
@@ -135,6 +138,6 @@
 		<script src="assets/js/jquery.core.js"></script>
         <script src="assets/js/jquery.app.js"></script>
 		<script src="assets/pages/jquery.dashboard_2.js"></script>
-		
+
     </body>
 </html>

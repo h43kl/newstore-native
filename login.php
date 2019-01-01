@@ -1,27 +1,30 @@
 <?php
 session_start();
 
-// die($_SESSION['role']);
+// include file
+include('api/db_config.php');
+include('include/cek_role.php');
 
-if(isset($_SESSION['role'])){
-    if($_SESSION['role']=="admin")
-    {
-        header("Location: admin");
-    }
-    
-    if($_SESSION['role']=="owner")
-    {
-        header("Location: owner");
-	}
-	
-	if($_SESSION['role']=="therapis")
-    {
-        header("Location: therapis");
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // email and password sent from form
+    $email    = mysqli_real_escape_string($con, $_POST['email']);
+    $password = mysqli_real_escape_string($con, md5($_POST['password']));
+
+    $sql    = "SELECT * FROM users WHERE email = '$email' and password = '$password'";
+    $result = mysqli_query($con, $sql);
+    $row    = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
+    // Cek jika hasil query menghasilkan 1
+    if (mysqli_num_rows($result)) {
+        $_SESSION['role']  = $row['role'];
+        $_SESSION['email'] = $email;
+        $_SESSION['login'] = true;
+
+        header('location: login.php');
+    } else {
+        echo "<script>alert('Email or Password is incorrect!')</script>";
     }
 }
-include('index2.php');
-// include('db_config.php'); // karena sudah terinclude disini
-// include('access_check.php');
 ?>
 
 <!DOCTYPE html>
@@ -49,7 +52,7 @@ include('index2.php');
 
 		<div class="account-pages"></div>
 		<div class="clearfix"></div>
-		
+
 		<div class="wrapper-page">
 			<div class="card-box">
 				<div class="panel-heading">
@@ -85,7 +88,7 @@ include('index2.php');
 								<a href="page-recoverpw.php" class="text-dark"><i class="fa fa-lock m-r-5"></i> Forgot your password?</a>
 							</div>
 						</div>
-						
+
 					</form>
 
 				</div>
@@ -96,32 +99,6 @@ include('index2.php');
 		<script>
 			var resizefunc = [];
 		</script>
-
-<?php 
-    
-//   include("api/db_config.php");
-  if(isset($_POST['login']))  
-  {  
-	  $email=$_POST['email'];  
-	  $password=$_POST['password'];  
-	  
-	  $check_user="select * from users WHERE email='$email'AND password='$password'";  
-	
-	  $run=mysqli_query($con,$check_user);  
-	
-	  if(mysqli_num_rows($run))  
-	  {  
-		  echo "<script>window.open('index.php','_self')</script>";  
-	
-		  $_SESSION['email']=$email;//here session is used and value of $user_email store in $_SESSION.  
-	
-	  }  
-	  else  
-	  {  
-		echo "<script>alert('Email or Password is incorrect!')</script>";  
-	  }  
-  }  
-  ?>
 
 		<!-- jQuery  -->
         <script src="assets/js/jquery.min.js"></script>
@@ -135,9 +112,7 @@ include('index2.php');
         <script src="assets/js/jquery.nicescroll.js"></script>
         <script src="assets/js/jquery.scrollTo.min.js"></script>
 
-
         <script src="assets/js/jquery.core.js"></script>
         <script src="assets/js/jquery.app.js"></script>
-
 	</body>
 </html>

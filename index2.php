@@ -1,41 +1,28 @@
 <?php
 
-$error=''; 
+$error='';
 
 include("api/db_config.php");
 
-if(isset($_POST['submit']))
-{               
+if (isset($_POST['submit'])) {
     $email   = $_POST['email'];
     $password   = $_POST['password'];
-    
-                    
+
+
     $query = mysqli_query($con, "SELECT * FROM users WHERE email='$email' AND password='$password'");
-    if(mysqli_num_rows($query) == 0)
-    {
+    if (mysqli_num_rows($query) == 0) {
         $error = "Email or Password is invalid";
-    }
-    else
-    {
+    } else {
         $row = mysqli_fetch_assoc($query);
         $_SESSION['email']=$row['email'];
         $_SESSION['level'] = $row['level'];
-        
-        if($row['level'] == "Administrator")
-        {
-            
+
+        if ($row['level'] == "Administrator") {
             header("Location: admin");
-        }
-        
-        else if($row['level'] == "member")
-        {
-            
+        } elseif ($row['level'] == "member") {
             header("Location: member");
-        }
-        else
-        {
+        } else {
             $error = "Failed Login";
         }
     }
-}           
-?>
+}

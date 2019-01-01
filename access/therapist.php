@@ -1,9 +1,2 @@
 <?php
-$__access_config = array (
-
-
-
-    
-
-
-);
+$__access_config = array();

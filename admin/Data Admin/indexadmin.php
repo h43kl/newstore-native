@@ -20,7 +20,7 @@ include("api/db_config.php");
         <link href="assets/css/responsive.css" rel="stylesheet" type="text/css" />
 
         <script src="assets/js/modernizr.min.js"></script>
-        
+
     </head>
 
 
@@ -37,7 +37,7 @@ include("api/db_config.php");
             <?php include "sidemenu.php"; ?>
             <!-- Left Sidebar End -->
 
-            <!-- Start right Content here -->                   
+            <!-- Start right Content here -->
             <div class="content-page">
                 <!-- Start content -->
                 <div class="content">
@@ -47,10 +47,10 @@ include("api/db_config.php");
               <?php
                     $sesi = $_SESSION['username'];
                     $query="SELECT username, nama_lengkap FROM users WHERE username='$sesi'";
-                    $result=mysqli_query($con,$query);
+                    $result=mysqli_query($con, $query);
                     $row=mysqli_fetch_assoc($result);
-                    $username=$row['username'];               
-                    $namalengkap=$row['nama_lengkap'];               
+                    $username=$row['username'];
+                    $namalengkap=$row['nama_lengkap'];
                 ?>
 
                         <div class="row">
@@ -102,15 +102,15 @@ include("api/db_config.php");
                         </div>
 
                     </div> <!-- container -->
-                               
+
                 </div> <!-- content -->
 
                  <!-- Footer -->
                  <?php include "footer.php"; ?>
 
             </div>
-            
-            
+
+
             <!-- ============================================================== -->
             <!-- End Right content here -->
             <!-- ============================================================== -->
@@ -119,7 +119,7 @@ include("api/db_config.php");
         <!-- END wrapper -->
 
 
-    
+
         <script>
             var resizefunc = [];
         </script>
@@ -148,6 +148,6 @@ include("api/db_config.php");
 		<script src="assets/js/jquery.core.js"></script>
         <script src="assets/js/jquery.app.js"></script>
 		<script src="assets/pages/jquery.dashboard_2.js"></script>
-		
+
     </body>
 </html>
