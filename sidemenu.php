@@ -55,8 +55,10 @@
                 <li class="has_sub">
                     <a href="javascript:void(0);" class="waves-effect"><i class="ti-server"></i> <span> Master </span> <span class="menu-arrow"></span></a>
                     <ul class="list-unstyled">
-                        <li><a href="master_product.php">Product</a></li>
-                        <li><a href="master_service.php">Treatment</a></li>
+                        <li><a href="master_product.php">All product</a></li>
+                        <li><a href="master_product_group.php">Product</a></li>
+                        <li><a href="master_service_group.php">Treatment</a></li>
+                        
                     </ul>
                 </li>
 
